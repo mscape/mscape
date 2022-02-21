@@ -1,0 +1,12 @@
+name: Omniverse
+company: NVIDIA
+categories:
+  - Engine
+metaverseNative: 1
+description: NVIDIA Omniverse is a scalable, multi-GPU real-time development
+  platform for 3D simulation and design collaboration.
+website: https://developer.nvidia.com/nvidia-omniverse-platform
+github: ""
+twitterHandle: nvidiaomniverse
+group: 0
+logo: logos/technologies/omniverse.png

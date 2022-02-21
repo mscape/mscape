@@ -1,0 +1,14 @@
+name: Star Atlas
+twitterHandle: Automata, Inc.
+status: Live
+website: https://staratlas.com
+category: Games
+metaverseNative: 1
+threeD: "?"
+openWorld: "?"
+userContent: 0
+access:
+  - Web
+token: ATLAS
+description: Star Atlas is a virtual gaming metaverse based in the year 2620.
+logo: logos/projects/staratlas.svg

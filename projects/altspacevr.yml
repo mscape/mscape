@@ -1,0 +1,17 @@
+name: AltspaceVR
+twitterHandle: AltspaceVR
+status: Live
+website: https://altvr.com
+category: Virtual worlds
+metaverseNative: 0
+threeD: 1
+openWorld: 1
+userContent: 1
+access:
+  - Proprietary client
+  - VR
+token: N/A
+description: AltspaceVR is a metaverse platform for live, virtual events,
+  empowering artists, brands, and businesses to easily design meaningful
+  experiences that foster community and connection.
+logo: logos/projects/altspacevr.png

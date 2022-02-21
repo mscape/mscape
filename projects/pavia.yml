@@ -1,0 +1,15 @@
+name: Pavia
+twitterHandle: Pavia Corp
+status: Presale
+website: https://www.pavia.io
+category: Games
+metaverseNative: 1
+threeD: "?"
+openWorld: "?"
+userContent: 1
+access:
+  - "?"
+token: PAVIA
+description: Pavia is a metaverse being built on Cardano. Each land parcel is a
+  uniquely numbered Cardano NFT (CNFT) based on coordinates.
+logo: logos/projects/pavia.png

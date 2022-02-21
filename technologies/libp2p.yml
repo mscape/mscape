@@ -1,0 +1,13 @@
+name: libp2p
+company: Protocol Labs
+categories:
+  - Connectivity
+metaverseNative: 0
+description: libp2p is a modular network stack for peer-to-peer communication
+  developed by Protocol Labs. libp2p powers IPFS, Filecoin and other
+  applications.
+website: https://libp2p.io/
+github: ""
+twitterHandle: libp2p
+group: 0
+logo: logos/technologies/libp2p.png

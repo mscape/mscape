@@ -1,0 +1,19 @@
+name: Upland
+twitterHandle: uplandme
+status: Beta
+website: https://www.upland.me/
+category: Games
+metaverseNative: 1
+threeD: 1
+openWorld: 1
+userContent: 1
+access:
+  - Propiertary client
+  - Web
+token: UPX
+description: Upland is the brand new NFT metaverse that is mapped to the real
+  world. Users can buy, sell and trade virtual properties mapped to real
+  addresses. Build their dream house, start a virtual business and earn UPX
+  coins or U.S. dollars by selling their NFT properties in a free and open
+  marketplace.
+logo: logos/projects/upland.png

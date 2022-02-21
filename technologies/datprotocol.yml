@@ -1,0 +1,13 @@
+name: Dat Protocol
+company: Dat Foundation
+categories:
+  - Fast geo-replicated caches
+metaverseNative: 0
+description: Dat is a peer-to-peer hypermedia protocol. Dat provides
+  public-key-addressed file archives which can be synced securely and browsed
+  on-demand.
+website: https://www.datprotocol.com/
+github: ""
+twitterHandle: dat_protocol
+group: 0
+logo: logos/technologies/datprotocol.png

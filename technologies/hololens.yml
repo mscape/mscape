@@ -1,0 +1,13 @@
+name: HoloLens
+company: Microsoft
+categories:
+  - Interfaces
+metaverseNative: 0
+description: HoloLens are a pair of mixed reality smartglasses developed and
+  manufactured by Microsoft. HoloLens serves a variety of enterprise
+  applications across industries.
+website: https://www.microsoft.com/en-us/hololens
+github: ""
+twitterHandle: HoloLens
+group: 0
+logo: logos/technologies/hololens.svg

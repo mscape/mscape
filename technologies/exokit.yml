@@ -1,0 +1,14 @@
+name: Exokit
+company: Exokit
+categories:
+  - Engine
+metaverseNative: 0
+description: Exokit enables developers to build XR experiences using the same
+  code that runs on the web. Exokit engine is written on top of Node and
+  emulates a web browser, providing native hooks for WebGL, WebXR, WebAudio, and
+  other APIs used in immersive experiences.
+website: https://exokit.org
+github: exokitxr/exokit
+twitterHandle: exokitXR
+group: 0
+logo: logos/technologies/exokit.svg

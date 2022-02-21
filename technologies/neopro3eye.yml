@@ -1,0 +1,14 @@
+name: Neo Pro 3 (Eye)
+company: Pico Interactive
+categories:
+  - Interfaces
+  - Capable clients
+metaverseNative: 0
+description: Neo Pro 3 (Light) is a VR headset developed by Pico Interactive.
+  Neo Pro 3 mainly focuses on Enterprise VR use cases. Neo Pro 3 supports all
+  major development engines including open development architecture (openXR).
+website: https://www.pico-interactive.com/
+github: ""
+twitterHandle: PicoInteractive
+group: 0
+logo: logos/technologies/neopro3eye.png

@@ -1,0 +1,15 @@
+name: Mona
+twitterHandle: monaverse
+status: Live
+website: https://www.mona.gallery
+category: Virtual worlds
+metaverseNative: 1
+threeD: 1
+openWorld: 0
+userContent: 1
+access:
+  - Web
+token: N/A
+description: Mona spaces are beautiful social worlds for you to collect, show
+  your art, and gather with others.
+logo: logos/projects/mona.png

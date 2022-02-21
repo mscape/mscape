@@ -1,0 +1,15 @@
+name: OVR
+twitterHandle: OVRtheReality
+status: Live
+website: https://www.ovr.ai/
+category: Virtual worlds
+metaverseNative: 1
+threeD: 1
+openWorld: 1
+userContent: 1
+access:
+  - Propietary client
+token: OVR
+description: OVR is an AR NFT metaverse platform that layers over the entire
+  world. Users can imagine, create & sell experiences for B2B + B2C.
+logo: logos/projects/ovr.jpeg

@@ -1,0 +1,13 @@
+name: OpenVR
+company: Valve Corporation
+categories:
+  - Engine
+metaverseNative: 0
+description: OpenVR is an API and runtime that allows access to VR hardware from
+  multiple vendors without requiring that applications have specific knowledge
+  of the hardware they are targeting.
+website: https://www.steamvr.com/de/
+github: ValveSoftware/openvr
+twitterHandle: OpenVR
+group: 0
+logo: logos/technologies/openvr.png

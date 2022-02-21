@@ -1,0 +1,14 @@
+name: RABP
+twitterHandle: rabpnft
+status: Live
+website: https://rabp.io
+category: Virtual worlds
+metaverseNative: 1
+threeD: 1
+openWorld: 0
+userContent: 0
+access:
+  - Web
+token: ""
+description: An NFT & Metaverse project with a real life utility
+logo: logos/projects/rabp.png

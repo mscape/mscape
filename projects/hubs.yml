@@ -1,0 +1,17 @@
+name: Hubs
+twitterHandle: MozillaHubs
+status: Live
+website: https://hubs.mozilla.com
+category: Virtual worlds
+metaverseNative: 0
+threeD: 1
+openWorld: 1
+userContent: 1
+access:
+  - Web
+  - Proprietary client
+token: N/A
+description: Hubs is a virtual collaboration platform that runs in your browser.
+  With Hubs you can create your own 3D spaces with a single click. Invite others
+  to join using a URL. No installation or app store required.
+logo: logos/projects/hubs.jpeg

@@ -1,0 +1,17 @@
+name: Supermedium
+twitterHandle: supermediumvr
+status: Live
+website: https://www.supermedium.com
+category: Virtual worlds
+metaverseNative: 0
+threeD: 1
+openWorld: 0
+userContent: 0
+access:
+  - VR
+token: N/A
+description: Supermedium is a VR space of immersive utilities centered around
+  comfort, focus, and freedom from small screens. They started with a comic book
+  reader because they saw some excitment out of our early prototypes of
+  utilities that they built (e.g., a book reader and Reddit client).
+logo: logos/projects/supermedium.png

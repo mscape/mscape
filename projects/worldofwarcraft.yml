@@ -1,0 +1,18 @@
+name: World of Warcraft
+twitterHandle: Warcraft
+status: Live
+website: https://worldofwarcraft.com/en-gb/
+category: Games
+metaverseNative: 0
+threeD: 1
+openWorld: 1
+userContent: 0
+access:
+  - Proprietary client
+token: N/A
+description: World of Warcraft (WoW) is a massively multiplayer online
+  role-playing game that allows players to create a character avatar and explore
+  an open game world in third- or first-person view, exploring the landscape,
+  fighting various monsters, completing quests, and interacting with non-player
+  characters or other players.
+logo: logos/projects/worldofwarcraft.png

@@ -1,0 +1,16 @@
+name: Spatial
+twitterHandle: spatialxr
+status: Live
+website: https://spatial.io
+category: Virtual worlds
+metaverseNative: 1
+threeD: 1
+openWorld: 1
+userContent: 0
+access:
+  - Web
+  - Proprietary client
+token: N/A
+description: Spatial is an NFT and social spaces metaverse platform to run art
+  exhibitions, events and experiences.
+logo: logos/projects/spatial.jpeg

@@ -1,0 +1,14 @@
+name: Ready Player Me
+company: Wolf3D
+categories:
+  - Avatar
+  - Identity
+metaverseNative: 1
+description: Ready Player Me (RPM) is an avatar and identity service developed
+  by Wolf3D. RPM provides generation management of a 3D avatars and an
+  identity/authentication solution that can be integrated with web applications.
+website: https://readyplayer.me/
+github: ""
+twitterHandle: readyplayerme
+group: 0
+logo: logos/technologies/readyplayerme.png

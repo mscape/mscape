@@ -1,0 +1,13 @@
+name: TactSuit
+company: BHaptics
+categories:
+  - Interfaces
+metaverseNative: 0
+description: TactSuit is a full body haptic suit with 40 haptic points wrapped
+  around your upper body designed by BHaptics. TactSuit features additional
+  accessories for other body parts (e.g., arms).
+website: https://www.bhaptics.com/tactsuit
+github: ""
+twitterHandle: bHaptics
+group: 0
+logo: logos/technologies/tactsuit.png

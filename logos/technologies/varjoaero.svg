@@ -1,0 +1,17 @@
+<svg viewBox="0 0 115 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="varjo-main-logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3da3b2">
+        <animate attributeName="stop-color" values="#3da3b2; #abeece; #e8c0a0; #3da3b2" dur="4s" repeatCount="indefinite"></animate>
+      </stop>
+      <stop offset="100%" stop-color="#abeece">
+        <animate attributeName="stop-color" values="#abeece; #e8c0a0; #3da3b2; #abeece;" dur="4s" repeatCount="indefinite"></animate>
+      </stop>
+    </linearGradient>
+  </defs>
+  <g id="varjo-logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Logo" fill="url(#varjo-main-logo-gradient)">
+      <path d="M37.8243239,0 L49.7761194,11.1930493 L47.5362,13.2914323 L37.8243239,4.19565041 L27.9861881,13.4096825 L25.7462687,11.312415 L37.8243239,0 Z M57.5,0 L71.2313433,0 L71.2313433,3.03360416 L60.6248455,3.03360416 L60.6248455,13.4096825 L57.5,13.4096825 L57.5,0 Z M84.4124679,0 L87.5373134,0 L87.5373134,13.4096825 L73.8059701,13.4096825 L73.8059701,10.3759493 L84.4124679,10.3759493 L84.4124679,0 Z M11.9517955,9.21420656 L21.7899313,0 L24.0298507,2.09885347 L11.9517955,13.4096825 L0,2.21654097 L2.23991942,0.118803027 L11.9517955,9.21420656 Z M101.268657,0.838105154 L115,0.838105154 L115,14.2477876 L111.875288,14.2477876 L111.875288,3.87183834 L101.268657,3.87183834 L101.268657,0.838105154 Z M96.9776119,0.838105154 L100.102457,0.838105154 L100.102457,11.2146248 L110.708955,11.2146248 L110.708955,14.2477876 L96.9776119,14.2477876 L96.9776119,0.838105154 Z" id="Combined-Shape"></path>
+    </g>
+  </g>
+</svg>

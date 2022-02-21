@@ -1,0 +1,12 @@
+name: Mediasoup
+company: Mediasoup
+categories:
+  - Communication
+metaverseNative: 0
+description: Mediasoup can be used for building multi-party video conferencing
+  and real-time streaming apps.
+website: https://mediasoup.org
+github: versatica/mediasoup
+twitterHandle: ""
+group: 0
+logo: logos/technologies/mediasoup.png

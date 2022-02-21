@@ -1,0 +1,19 @@
+name: GTA online
+twitterHandle: RockstarGames
+status: Live
+website: https://www.rockstargames.com/GTAOnline
+category: Games
+metaverseNative: 0
+threeD: 1
+openWorld: 1
+userContent: 0
+access:
+  - Proprietary client
+token: N/A
+description: Grand Theft Auto Online is an online multiplayer action-adventure
+  game with an open-world design. It lets players freely roam San Andreas, which
+  includes an open countryside and the fictional city of Los Santos (based on
+  Los Angeles). Players control a customisable silent protagonist in their
+  journey to become a powerful criminal, slowly building an empire as they
+  complete increasingly difficult tasks
+logo: logos/projects/gtaonline.jpeg

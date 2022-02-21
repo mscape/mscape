@@ -1,0 +1,16 @@
+name: CryptoVoxels
+twitterHandle: cryptovoxels
+status: Live
+website: https://www.cryptovoxels.com/
+category: Virtual worlds
+metaverseNative: 1
+threeD: 1
+openWorld: 1
+userContent: 1
+access:
+  - Web
+token: COLR
+description: Cryptovoxels is a virtual world and metaverse, powered by the
+  Ethereum blockchain. Players can buy land and build stores and art galleries.
+  Editing tools, avatars and text chat are built in.
+logo: logos/projects/cryptovoxels.png

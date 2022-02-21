@@ -1,0 +1,13 @@
+name: Lightship ARDK
+company: Niantic
+categories:
+  - Engine
+metaverseNative: 1
+description: Lightship's Augmented Reality Developer Kit (Lightship ARDK) is a
+  development kit to build mobile AR experiences for both Android and iOS.
+  Lightship ARDK powers games like PokemonGo.
+website: https://lightship.dev/products/ardk/
+github: ""
+twitterHandle: LightshipAR
+group: 0
+logo: logos/technologies/lightshipardk.jpeg

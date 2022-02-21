@@ -1,0 +1,12 @@
+name: Emergence SDK  Agent
+company: Crucible
+categories:
+  - Identity
+metaverseNative: 1
+description: SDK and agent for popular game engines and web frameworks that
+  provides easy, familiar access to web3's identity layer
+website: https://crucible.network/
+github: ""
+twitterHandle: CrucibleNetwork
+group: 0
+logo: logos/technologies/emergencesdkagent.jpg

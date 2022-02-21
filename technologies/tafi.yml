@@ -1,0 +1,13 @@
+name: Tafi
+company: Tavi Avatars
+categories:
+  - Avatar
+metaverseNative: 1
+description: Tavi is an avatar service to generate 3D human-like avatars based
+  on pictures. Tavi also features an eCommerce SDK to monetize generated
+  avatars.
+website: https://maketafi.com/
+github: ""
+twitterHandle: maketafi
+group: 0
+logo: logos/technologies/tafi.svg

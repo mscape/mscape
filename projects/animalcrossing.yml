@@ -1,0 +1,17 @@
+name: Animal Crossing
+twitterHandle: animalcrossing
+status: Live
+website: https://animal-crossing.com/
+category: Games
+metaverseNative: 0
+threeD: 1
+openWorld: 1
+userContent: 0
+access:
+  - Proprietary client
+token: N/A
+description: Animal Crossing[a] is a social simulation video game where the
+  player character is a human who lives in a village inhabited by various
+  anthropomorphic animals and can do various activities like fishing, bug
+  catching, and fossil hunting.
+logo: logos/projects/animalcrossing.png

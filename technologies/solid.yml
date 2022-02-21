@@ -1,0 +1,13 @@
+name: Solid
+company: Solid Project
+categories:
+  - Private storage
+metaverseNative: 0
+description: Solid is a data storage specification that lets people store their
+  data securely in decentralized data stores (Pods). Solid enables true data
+  ownership for individuals.
+website: https://solidproject.org/
+github: ""
+twitterHandle: project_solid
+group: 0
+logo: logos/technologies/solid.png

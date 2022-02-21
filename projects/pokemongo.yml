@@ -1,0 +1,16 @@
+name: Pokemon Go
+twitterHandle: PokemonGoApp
+status: Live
+website: https://pokemongolive.com/en/
+category: Games
+metaverseNative: 0
+threeD: 1
+openWorld: 1
+userContent: 0
+access:
+  - Proprietary client
+token: N/A
+description: Pokémon Go is a 2016 augmented reality (AR) mobile game which uses
+  GPS to locate, capture, train, and battle virtual creatures, called Pokémon,
+  which appear as if they are in the player's real-world location.
+logo: logos/projects/pokemongo.png

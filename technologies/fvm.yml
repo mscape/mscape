@@ -1,0 +1,14 @@
+name: FVM
+company: Protocol Labs
+categories:
+  - Shared compute
+metaverseNative: 0
+description: Filecoin Virtual Machine (FVM) is decentralized compute for the
+  Filecoin storage network developed by Protocol Labs. FVM enables the use of
+  smart contracts within the Filecoin network. Smart contracts enable new use
+  cases like bridges to other networks.
+website: https://fvm.filecoin.io/
+github: ""
+twitterHandle: Filecoin
+group: 0
+logo: logos/technologies/fvm.png

@@ -1,0 +1,13 @@
+name: Webaverse
+company: Webaverse
+categories:
+  - Engine
+metaverseNative: 1
+description: Webaverse is an open source web3 metaverse game engine that anyone
+  can host. It runs in the browser, utilizes open tools and standards like
+  ThreeJS and NodeJS and is super easy to use.
+website: https://webaverse.com
+github: ""
+twitterHandle: webaverse
+group: 0
+logo: logos/technologies/webaverse.png

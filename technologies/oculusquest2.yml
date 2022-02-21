@@ -1,0 +1,12 @@
+name: Oculus Quest 2
+company: Meta
+categories:
+  - Interfaces
+  - Capable clients
+metaverseNative: 0
+description: Oculus Quest 2 is a standalone VR headset designed by Meta.
+website: https://www.oculus.com/
+github: ""
+twitterHandle: MetaQuestVR
+group: 0
+logo: logos/technologies/oculusquest2.png

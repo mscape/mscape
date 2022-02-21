@@ -1,0 +1,12 @@
+name: Gear VR
+company: Samsung
+categories:
+  - Interfaces
+metaverseNative: 0
+description: Gear VR is a virtual reality headset developed by Samsung. The
+  headset requires a smartphone to display experiences.
+website: https://www.samsung.com/global/galaxy/gear-vr/
+github: ""
+twitterHandle: SamsungMobile
+group: 0
+logo: logos/technologies/gearvr.png

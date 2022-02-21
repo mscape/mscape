@@ -1,0 +1,13 @@
+name: Vive Pro 2
+company: HTC
+categories:
+  - Interfaces
+metaverseNative: 1
+description: Vive Pro 2 is a VR headset designed by HTC. It requires a PC to
+  display experiences. It features a wide range of accessories, e.g., tracking
+  base stations and controllers. It has a 5k display.
+website: https://www.vive.com/us/product/vive-pro2/overview/
+github: ""
+twitterHandle: htcvive
+group: 0
+logo: logos/technologies/vivepro2.png

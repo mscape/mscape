@@ -1,0 +1,12 @@
+name: Augmented Reality
+company: Apple
+categories:
+  - Engine
+metaverseNative: 0
+description: Apple Augmented Reality is an AR platform with powerful frameworks
+  like ARKit and RealityKit to create AR experiences for Apple devices.
+website: https://developer.apple.com/augmented-reality/
+github: ""
+twitterHandle: apple
+group: 0
+logo: logos/technologies/augmentedreality.png

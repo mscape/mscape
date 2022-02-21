@@ -1,0 +1,35 @@
+name: Deploy to Fleek
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy-landscape:
+    runs-on: ubuntu-latest
+    name: Deploys the landscape to Fleek
+    steps:
+      - uses: actions/checkout@v2
+      - name: Move configuration
+        run: mv landscape.fleek.json .fleek.json
+      - name: Deploy landscape 
+        id: deployLandscape
+        uses: fleekhq/action-deploy@v1
+        with:
+          apiKey: ${{ secrets.FLEEK_API_KEY }}
+      - name: Get the output url
+        run: echo "Deploy url is ${{ steps.deploy.outputs.deployUrl }}"
+  deploy-landingpage:
+    runs-on: ubuntu-latest
+    name: Deploys the landing page to Fleek
+    steps:
+      - uses: actions/checkout@v2
+      - name: Move configuration
+        run: mv landingpage.fleek.json .fleek.json
+      - name: Deploy landing page 
+        id: deploy
+        uses: fleekhq/action-deploy@v1
+        with:
+          apiKey: ${{ secrets.FLEEK_API_KEY }}
+          workDir: landingpage
+      - name: Get the output url
+        run: echo "Deploy url is ${{ steps.deploy.outputs.deployUrl }}"

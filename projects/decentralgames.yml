@@ -1,0 +1,16 @@
+name: Decentral Games
+twitterHandle: decentralgames
+status: Live
+website: https://decentral.games/
+category: Virtual worlds
+metaverseNative: 1
+threeD: 0
+openWorld: 0
+userContent: 0
+access:
+  - VR
+  - Web
+token: DG
+description: Decentral Games is play & earn gaming platform in the metaverse.
+  Players can buy clothes and accessories for the virtual avatars.
+logo: logos/projects/decentralgames.png

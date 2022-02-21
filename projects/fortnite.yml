@@ -1,0 +1,20 @@
+name: Fortnite
+twitterHandle: FortniteGame
+status: Live
+website: https://www.epicgames.com/fortnite/en-US/home
+category: Games
+metaverseNative: 0
+threeD: 1
+openWorld: 1
+userContent: 0
+access:
+  - Proprietary client
+token: N/A
+description: Fortnite is an online free-to-play battle royale video game in
+  which up to 100 players fight to be the last person standing. Weaponless
+  players airdrop from a "Battle Bus" that crosses the game's map. When they
+  land, they must scavenge for weapons, items, resources, and even vehicles
+  while trying to stay alive and to attack and eliminate other players. Over the
+  course of a round, the safe area of the map shrinks down in size due to an
+  incoming toxic storm.
+logo: logos/projects/fortnite.webp

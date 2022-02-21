@@ -1,0 +1,13 @@
+name: Avatar SDK
+company: Itseez3D
+categories:
+  - Avatar
+metaverseNative: 1
+description: Avatar SDK is an avatar service developed by Itseez3D. Avatar SDK
+  generates personalized full-body 3D avatars from selfies. The avatars can be
+  used in video conferencing tools or the metaverse.
+website: https://avatarsdk.com/
+github: ""
+twitterHandle: avatarsdk
+group: 0
+logo: logos/technologies/avatarsdk.png

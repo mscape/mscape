@@ -1,0 +1,14 @@
+name: Memoji
+company: Apple
+categories:
+  - Avatar
+metaverseNative: 0
+description: Memoji are 3D emojies integrated in Apple's iOS operating system.
+  Memojies are 3D emojies that match your personality and mood. Memoji uses your
+  voice and camera video to mirror your facial expressions on to your emoji.
+  Memojies can be shared with iMessage and Facetime.
+website: https://support.apple.com/en-us/HT208986
+github: ""
+twitterHandle: apple
+group: 0
+logo: logos/technologies/memoji.png

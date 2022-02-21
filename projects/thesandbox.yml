@@ -1,0 +1,15 @@
+name: The Sandbox
+twitterHandle: thesandboxgame
+status: Alpha
+website: https://www.sandbox.game
+category: Virtual worlds
+metaverseNative: 1
+threeD: 1
+openWorld: 1
+userContent: 1
+access:
+  - Web
+token: SAND
+description: The Sandbox is a community-driven platform where creators can
+  monetize voxel assets and gaming experiences on the blockchain.
+logo: logos/projects/thesandbox.png

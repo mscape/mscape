@@ -1,0 +1,16 @@
+name: Somnium Space
+twitterHandle: somniumspace
+status: Live
+website: https://somniumspace.com/
+category: Virtual worlds
+metaverseNative: 1
+threeD: 1
+openWorld: 1
+userContent: 1
+access:
+  - Propiertary client
+  - Web
+token: CUBE
+description: Somnium Space is an open, social & persistent VR platform powered
+  by blockchain.
+logo: logos/projects/somniumspace.png

@@ -1,0 +1,12 @@
+name: Teslasuit
+company: VR Electronics
+categories:
+  - Interfaces
+metaverseNative: 0
+description: Teslasuit is a full body haptic suit for physical VR experiences
+  designed by VR Electronics.
+website: https://teslasuit.io/
+github: ""
+twitterHandle: teslasuit
+group: 0
+logo: logos/technologies/teslasuit.png

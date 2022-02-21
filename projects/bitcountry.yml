@@ -1,0 +1,15 @@
+name: Bit Country
+twitterHandle: BitDotCountry
+status: Early Access
+website: https://bit.country/
+category: Virtual worlds
+metaverseNative: 1
+threeD: 1
+openWorld: 1
+userContent: 1
+access:
+  - Web
+token: NUUM
+description: Bit Country is a platform for user-created Metaverses & Games with
+  opportunities to earn. Communities can launch their own metaverse.
+logo: logos/projects/bitcountry.jpeg

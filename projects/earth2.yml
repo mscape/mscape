@@ -1,0 +1,18 @@
+name: Earth 2
+twitterHandle: earth2io
+status: Alpha
+website: https://earth2.io
+category: Virtual worlds
+metaverseNative: 1
+threeD: 1
+openWorld: 1
+userContent: 1
+access:
+  - "?"
+token: N/A
+description: Earth 2 is a futuristic concept for a second earth; a metaverse,
+  between virtual and physical reality in which real-world geolocations on a
+  sectioned map correspond to user generated digital virtual environments. These
+  environments can be owned, bought, sold, and in the near future deeply
+  customized.
+logo: logos/projects/earth2.png

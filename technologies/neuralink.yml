@@ -1,0 +1,11 @@
+name: Neuralink
+company: Neuralink
+categories:
+  - Interfaces
+metaverseNative: 0
+description: Neuralink is a communication interface to read and interact with the brain.
+website: https://neuralink.com/applications/
+github: ""
+twitterHandle: neuralink
+group: 0
+logo: logos/technologies/neuralink.jpeg

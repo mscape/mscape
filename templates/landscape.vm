@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:title" content="mscape.io"/>
+    <meta property="og:description" content="Community-driven metaverse landscape" />
+    <meta property="og:image" content="https://mscape.io/assets/preview.png"/>
+    <meta property="og:url" content="https://mscape.io"/>
+    <title>mscape.io - Community-driven metaverse landscape</title>
+    <style>
+        html,body {
+            background:#090E1B;
+            color:#fff;
+            font-family:'Inter',sans-serif;
+            margin:0;
+            min-height:100%;
+            min-width:100%;
+        }
+
+        h1 {
+            font-size:36px;
+            font-style:normal;
+            font-weight:700;
+            letter-spacing:2px;
+            line-height:46px;
+        }
+
+        h3 {
+            font-size:1.5rem;
+            font-style:normal;
+            font-weight:700;
+            letter-spacing:.4px;
+            line-height:1.5;
+            margin:8px 0;
+        }
+
+        .filter-container {
+            align-items:center;
+            display:flex;
+            height:70px;
+            justify-content:space-between;
+            margin:0 auto;
+            padding:0;
+            width:100%;
+        }
+
+        p {
+            color:#E4F3FF;
+            font-size:18px;
+            line-height:32px;
+            margin:50px 0;
+        }
+
+        label {
+            color:#E4F3FF;
+            font-size:18px;
+            line-height:32px;
+        }
+
+        .container {
+            margin-left:auto;
+            margin-right:auto;
+            padding:0 15px;
+        }
+
+        .column.center > h1 {
+            text-align:center;
+        }
+
+        .row {
+            display:grid;
+            grid-gap:20px;
+            margin:80px 0;
+        }
+
+        .row-1 {
+            grid-template-columns:1fr;
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                width:calc(100% - 30px);
+            }
+
+            .row-2,.row-3-2 {
+                grid-template-columns:repeat(1,1fr);
+            }
+
+            #nav-pl {
+                display:none;
+            }
+        }
+
+        @media (min-width: 576px) and (max-width: 768px) {
+            .container {
+                max-width:540px;
+            }
+
+            .row-2,.row-3-2 {
+                grid-template-columns:repeat(1,1fr);
+            }
+
+            #nav-pl {
+                display:none;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 992px) {
+            .container {
+                max-width:720px;
+            }
+        }
+
+        @media (min-width: 992px) and (max-width: 1200px) {
+            .container {
+                max-width:960px;
+            }
+        }
+
+        @media (min-width: 1200px) and (max-width: 1400px) {
+            .container {
+                max-width:1140px;
+            }
+        }
+
+        @media (min-width: 1400px) {
+            .container {
+                width:1320px;
+            }
+        }
+
+        .layer-wrapper {
+            display:flex;
+            justify-content:stretch;
+            margin:15px 0;
+        }
+
+        .layer {
+            background:#242938;
+            display:flex;
+            flex:1;
+            flex-direction:column;
+            justify-content:flex-start;
+        }
+
+        .capability-layer {
+            display:flex;
+            margin:10px 0;
+        }
+
+        .capability-items {
+            display:flex;
+            flex:1;
+            flex-wrap:wrap;
+            gap:10px;
+        }
+
+        .item {
+            background:#090E1B;
+            border:1px solid;
+            border-image-slice:1;
+            border-image-source:linear-gradient(0deg,#090E1B 0%,#090E1B 100%);
+            border-width:1px;
+            cursor:pointer;
+            display:flex;
+            flex-direction:column;
+            height:70px;
+            justify-content:space-around;
+            text-align:center;
+            transition:all .2s ease;
+            transition:all .2s ease;
+            width:120px;
+        }
+
+        .item:hover {
+            border-image-source:linear-gradient(288.18deg,#A4AEFC -10.27%,#6979F8 59.69%,rgba(105,121,248,0) 114.11%);
+        }
+
+        .item > img,svg {
+            margin:10px;
+            max-height:calc(100% - 20px);
+            max-width:calc(100% - 20px);
+            object-fit:contain;
+        }
+
+        .capability {
+            border-radius:2px;
+            font-size:12px;
+            font-style:normal;
+            font-weight:700;
+            line-height:1rem;
+            margin:0 10px;
+            padding:7px 12px;
+            text-align:center;
+            transform:rotate(-180deg);
+            width:1rem;
+            writing-mode:vertical-lr;
+        }
+
+        .layer-text {
+            -webkit-background-clip:text;
+            background-clip:text;
+            color:transparent;
+            font-size:14px;
+            font-style:normal;
+            font-weight:700;
+            letter-spacing:1px;
+            line-height:26px;
+            margin:10px;
+            text-align:center;
+            transform:rotate(-180deg);
+            writing-mode:vertical-lr;
+        }
+
+        #projects > .layer-text {
+            background-image:linear-gradient(94.72deg,#9EA8FE 41.46%,#6979F8 67.52%,rgba(105,121,248,0) 120.09%);
+        }
+
+        #experiences > .layer-text {
+            background-image:linear-gradient(91.57deg,#81FFDB 0.77%,#00C48C 59.87%,rgba(0,227,162,0) 115.43%);
+        }
+
+        #capabilities > .layer-text {
+            background-image:linear-gradient(91.57deg,#95CEFF 0.77%,#0084F4 59.87%,rgba(0,132,244,0) 115.43%);
+        }
+
+        #infrastructure > .layer-text {
+            background-image:linear-gradient(91.57deg,#D48EF7 0.77%,#BE52F2 59.87%,rgba(190,82,242,0) 115.43%);
+        }
+
+        #projects > .layer > .capability-layer > .capability {
+            background:#6979F8;
+        }
+
+        #experiences > .layer > .capability-layer > .capability {
+            background:#00C48C;
+        }
+
+        #capabilities > .layer > .capability-layer > .capability {
+            background:#0084F4;
+        }
+
+        #infrastructure > .layer > .capability-layer > .capability {
+            background:#BE52F2;
+        }
+
+        #framework-divider {
+            background-color:#242938;
+            border-style:none none dotted;
+            border-top:1px dotted #242938;
+            color:#242938;
+        }
+
+        a {
+            color:#6979F8;
+            text-decoration:none;
+            transition:all .2s ease;
+        }
+
+        a:hover {
+            color:#FFF;
+            text-decoration:underline;
+        }
+
+        a.button-pill {
+            align-items:center;
+            background:#242938;
+            border-radius:2px;
+            display:flex;
+            height:48px;
+            justify-content:center;
+            margin:5px;
+            text-decoration:none;
+            width:48px;
+        }
+
+        a.button-pill:hover {
+            background:#2f3549;
+        }
+
+        a.button {
+            border:3px solid;
+            border-image-slice:1;
+            border-image-source:linear-gradient(94.72deg,#9EA8FE 41.46%,#6979F8 67.52%,rgba(105,121,248,0) 120.09%);
+            border-width:3px;
+            color:#6979F8;
+            display:inline-block;
+            font-style:normal;
+            font-weight:700;
+            letter-spacing:.02em;
+            line-height:16px;
+            padding:16px;
+            text-align:center;
+            text-decoration:none;
+            transition:all .2s ease;
+        }
+
+        a.button:hover {
+            color:#FFF;
+        }
+
+        a.button-sm {
+            font-size:14px;
+        }
+
+        a.link {
+            color:#6979F8;
+            display:inline-block;
+            font-style:normal;
+            font-weight:700;
+            letter-spacing:.02em;
+            line-height:16px;
+            padding:16px;
+            text-align:center;
+            text-decoration:none;
+            transition:all .2s ease;
+        }
+
+        a.link-sm {
+            font-size:14px;
+        }
+
+        a.link:hover {
+            color:#FFF;
+        }
+
+        #nav {
+            align-items:center;
+            display:flex;
+            height:70px;
+            justify-content:space-between;
+            margin:0 auto;
+            padding:0;
+            width:100%;
+        }
+
+        #footer {
+            align-items:center;
+            display:flex;
+            height:70px;
+            justify-content:space-between;
+            margin:0 auto;
+            padding:0;
+            width:100%;
+        }
+
+        #footer-button-pills {
+            align-items:flex-end;
+            display:flex;
+            justify-content:flex-start;
+        }
+
+        input[type=checkbox] {
+            -moz-appearance:none;
+            -webkit-appearance:none;
+            -webkit-tap-highlight-color:transparent;
+            appearance:none;
+            cursor:pointer;
+        }
+
+        input[type=checkbox]:focus {
+            outline:0;
+        }
+
+        #toggle-extended {
+            background:linear-gradient(180deg,#2D2F39 0%,#1F2027 100%);
+            border:2px solid #222632;
+            border-radius:2rem;
+            display:inline-block;
+            height:2rem;
+            margin:0;
+            position:relative;
+            transition:all .2s ease;
+            width:3rem;
+        }
+
+        #toggle-extended:after {
+            background:#D2D7FD;
+            border-radius:50%;
+            box-shadow:0 1px 2px rgba(44,44,44,0.2);
+            content:"";
+            height:1.5rem;
+            left:2px;
+            position:absolute;
+            top:2px;
+            transition:all .2s cubic-bezier(0.5,0.1,0.75,1.35);
+            width:1.5rem;
+        }
+
+        #toggle-extended:checked {
+            border-color:#6979F8;
+        }
+
+        #toggle-extended:checked:after {
+            transform:translatex(1.25rem);
+        }
+
+        #toggle-extended-container {
+            align-items:center;
+            display:flex;
+            flex-direction:row;
+            gap:1rem;
+            justify-content:center;
+        }
+
+        [data-metaverse-native="0"] {
+            display:none;
+        }
+
+        #modal-background {
+            background-color:rgba(9,14,27,0.45);
+            display:none;
+            height:100%;
+            left:0;
+            opacity:.8;
+            position:fixed;
+            top:0;
+            width:100%;
+            z-index:10;
+        }
+
+        #modal-wrapper {
+            align-items:center;
+            display:flex;
+            display:none;
+            height:100%;
+            justify-content:center;
+            left:0;
+            position:fixed;
+            top:0;
+            width:100%;
+            z-index:11;
+        }
+
+        #modal {
+            background:#090E1B;
+            border:1px solid #242938;
+            border-radius:4px;
+            display:none;
+            max-height:80%;
+            max-width:1320px;
+            overflow-y:auto;
+            padding:1rem;
+            position:relative;
+            width:80%;
+            z-index:12;
+        }
+
+        #modal-content {
+            padding:15px;
+        }
+
+        #modal-content > p {
+            margin:10px 0;
+        }
+
+        #modal-close {
+            color:#A5AFFB;
+            cursor:pointer;
+            position:absolute;
+            right:1rem;
+        }
+
+        #modal-logo {
+            background:#222632;
+            display:flex;
+            flex-direction:column;
+            height:70px;
+            justify-content:space-around;
+            width:120px;
+        }
+
+        #modal-logo > img,svg {
+            margin:10px;
+            max-height:calc(100% - 20px);
+            max-width:calc(100% - 20px);
+            object-fit:contain;
+        }
+
+        #modal-header {
+            align-items:flex-start;
+            display:flex;
+            justify-content:space-between;
+        }
+
+        .modal-pill {
+            background-color:#6979F8;
+            border-radius:2px;
+            display:inline-block;
+            font-size:12px;
+            font-style:normal;
+            font-weight:700;
+            line-height:1rem;
+            margin-right:10px;
+            padding:7px 12px;
+            text-align:center;
+        }
+
+        .modal-pill-projects {
+            background:#6979F8;
+        }
+
+        .modal-pill-experiences {
+            background:#00C48C;
+        }
+
+        .modal-pill-capabilities {
+            background:#0084F4;
+        }
+
+        .modal-pill-infrastructure {
+            background:#BE52F2;
+        }
+
+        table {
+            border-spacing:0;
+            margin-top:20px;
+        }
+
+        th {
+            padding-right:15px;
+            text-align:left;
+        }
+
+        th,td {
+            color:#E4F3FF;
+            font-size:14px;
+            line-height:28px;
+        }
+
+        .twitter-timeline {
+            margin-top:20px!important;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav id="nav">
+            <div id="logo">
+                <svg width="55" height="12" viewBox="0 0 55 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.613969 8.20984V0.573475H2.63244V1.92078H2.72192C2.88101 1.47333 3.14617 1.12035 3.51738 0.861827C3.88859 0.603305 4.33272 0.474043 4.84977 0.474043C5.37344 0.474043 5.81923 0.604962 6.18712 0.866799C6.55502 1.12532 6.80029 1.47665 6.92292 1.92078H7.00246C7.15824 1.48328 7.43996 1.13361 7.84763 0.87177C8.25862 0.606619 8.74418 0.474043 9.30431 0.474043C10.0169 0.474043 10.5953 0.701079 11.0394 1.15515C11.4868 1.60591 11.7106 2.24559 11.7106 3.07419V8.20984H9.59763V3.4918C9.59763 3.06756 9.48494 2.74937 9.25957 2.53725C9.03419 2.32513 8.75246 2.21907 8.4144 2.21907C8.02993 2.21907 7.72997 2.3417 7.51454 2.58697C7.2991 2.82892 7.19138 3.14876 7.19138 3.54649V8.20984H5.13812V3.44705C5.13812 3.07253 5.0304 2.77423 4.81496 2.55217C4.60284 2.3301 4.32278 2.21907 3.97477 2.21907C3.73944 2.21907 3.52732 2.27873 3.3384 2.39805C3.1528 2.51405 3.0053 2.67812 2.89593 2.89024C2.78655 3.09904 2.73187 3.34431 2.73187 3.62603V8.20984H0.613969ZM20.0172 2.75103L18.0783 2.87035C18.0451 2.70463 17.9739 2.55548 17.8645 2.42291C17.7551 2.28702 17.6109 2.1793 17.432 2.09975C17.2563 2.01689 17.0458 1.97546 16.8006 1.97546C16.4724 1.97546 16.1957 2.04507 15.9703 2.18427C15.7449 2.32016 15.6323 2.50245 15.6323 2.73115C15.6323 2.91344 15.7052 3.06756 15.851 3.1935C15.9968 3.31945 16.2471 3.42054 16.6017 3.49677L17.9838 3.77518C18.7262 3.92764 19.2797 4.17291 19.6443 4.51098C20.0089 4.84904 20.1912 5.29317 20.1912 5.84336C20.1912 6.34384 20.0437 6.78299 19.7487 7.16083C19.4571 7.53867 19.056 7.83366 18.5456 8.04578C18.0385 8.25458 17.4535 8.35899 16.7906 8.35899C15.7797 8.35899 14.9743 8.14852 14.3744 7.72759C13.7778 7.30335 13.4282 6.72665 13.3254 5.99748L15.4085 5.88811C15.4715 6.19634 15.624 6.43167 15.8659 6.59407C16.1079 6.75316 16.4178 6.83271 16.7956 6.83271C17.1668 6.83271 17.4651 6.76145 17.6905 6.61893C17.9192 6.4731 18.0352 6.28583 18.0385 6.05714C18.0352 5.86491 17.954 5.70747 17.7949 5.58484C17.6358 5.45889 17.3905 5.36277 17.0591 5.29649L15.7367 5.03299C14.9909 4.88384 14.4358 4.62532 14.0712 4.25742C13.7099 3.88953 13.5293 3.42054 13.5293 2.85046C13.5293 2.35993 13.6618 1.93735 13.927 1.58271C14.1955 1.22807 14.5716 0.954631 15.0555 0.762395C15.5428 0.570161 16.1128 0.474043 16.7658 0.474043C17.7303 0.474043 18.4893 0.677879 19.0428 1.08555C19.5996 1.49322 19.9244 2.04838 20.0172 2.75103ZM25.2551 8.35899C24.4729 8.35899 23.8001 8.19327 23.2366 7.86183C22.6765 7.52707 22.2456 7.06306 21.944 6.46978C21.6457 5.87651 21.4966 5.19374 21.4966 4.42149C21.4966 3.63929 21.6474 2.95321 21.949 2.36325C22.2539 1.76997 22.6865 1.30761 23.2466 0.976174C23.8067 0.64142 24.4729 0.474043 25.2452 0.474043C25.9114 0.474043 26.4947 0.595019 26.9952 0.836969C27.4956 1.07892 27.8917 1.41865 28.1834 1.85615C28.475 2.29365 28.6358 2.80738 28.6656 3.39734H26.667C26.6107 3.01618 26.4616 2.7096 26.2196 2.47759C25.981 2.24227 25.6678 2.12461 25.28 2.12461C24.9518 2.12461 24.6652 2.2141 24.4199 2.39308C24.1779 2.56874 23.989 2.82561 23.8531 3.16367C23.7172 3.50174 23.6493 3.91107 23.6493 4.39166C23.6493 4.87887 23.7156 5.29317 23.8482 5.63455C23.984 5.97594 24.1746 6.23612 24.4199 6.41509C24.6652 6.59407 24.9518 6.68356 25.28 6.68356C25.5219 6.68356 25.739 6.63384 25.9312 6.53441C26.1268 6.43498 26.2875 6.2908 26.4135 6.10188C26.5428 5.90965 26.6273 5.6793 26.667 5.41083H28.6656C28.6325 5.99417 28.4734 6.5079 28.1884 6.95203C27.9066 7.39284 27.5172 7.73754 27.02 7.98612C26.5229 8.2347 25.9346 8.35899 25.2551 8.35899ZM32.4792 8.35402C31.992 8.35402 31.5578 8.2695 31.1766 8.10046C30.7955 7.92812 30.4939 7.67456 30.2718 7.33981C30.053 7.00174 29.9437 6.58081 29.9437 6.07703C29.9437 5.65278 30.0216 5.29649 30.1773 5.00813C30.3331 4.71978 30.5452 4.48777 30.8137 4.31211C31.0822 4.13645 31.3871 4.00387 31.7285 3.91438C32.0732 3.8249 32.4344 3.76192 32.8123 3.72546C33.2564 3.67906 33.6144 3.63598 33.8861 3.5962C34.1579 3.55312 34.3551 3.49014 34.4778 3.40728C34.6004 3.32442 34.6617 3.20179 34.6617 3.03938V3.00955C34.6617 2.69469 34.5623 2.45108 34.3634 2.27873C34.1679 2.10638 33.8895 2.02021 33.5282 2.02021C33.147 2.02021 32.8438 2.10473 32.6184 2.27376C32.393 2.43948 32.2439 2.64829 32.1709 2.90018L30.2121 2.74109C30.3116 2.27707 30.5071 1.87603 30.7988 1.53796C31.0905 1.19658 31.4666 0.934744 31.9273 0.752452C32.3914 0.566846 32.9283 0.474043 33.5381 0.474043C33.9624 0.474043 34.3684 0.523759 34.7562 0.623191C35.1473 0.722623 35.4936 0.876742 35.7952 1.08555C36.1002 1.29436 36.3405 1.56282 36.5161 1.89095C36.6918 2.21576 36.7796 2.6052 36.7796 3.05927V8.20984H34.7711V7.15089H34.7114C34.5888 7.38953 34.4247 7.59999 34.2192 7.78228C34.0137 7.96126 33.7668 8.10212 33.4785 8.20487C33.1901 8.3043 32.857 8.35402 32.4792 8.35402ZM33.0857 6.89237C33.3973 6.89237 33.6724 6.83105 33.911 6.70842C34.1496 6.58247 34.3369 6.41344 34.4728 6.20132C34.6087 5.98919 34.6766 5.7489 34.6766 5.48044V4.67007C34.6103 4.71315 34.5192 4.75293 34.4032 4.78938C34.2905 4.82253 34.1629 4.85401 34.0204 4.88384C33.8779 4.91036 33.7353 4.93522 33.5928 4.95842C33.4503 4.9783 33.321 4.99653 33.205 5.01311C32.9565 5.04956 32.7394 5.10757 32.5538 5.18711C32.3682 5.26666 32.224 5.37437 32.1212 5.51027C32.0185 5.64284 31.9671 5.80856 31.9671 6.00742C31.9671 6.29578 32.0715 6.51618 32.2803 6.66865C32.4924 6.81779 32.7609 6.89237 33.0857 6.89237ZM38.7027 11.0735V0.573475H40.7908V1.85615H40.8852C40.978 1.65065 41.1123 1.44185 41.2879 1.22973C41.4669 1.01429 41.6989 0.835312 41.984 0.692793C42.2723 0.54696 42.6303 0.474043 43.0578 0.474043C43.6147 0.474043 44.1284 0.619877 44.599 0.911543C45.0697 1.1999 45.4459 1.63574 45.7276 2.21907C46.0093 2.79909 46.1502 3.5266 46.1502 4.4016C46.1502 5.2534 46.0126 5.97262 45.7375 6.55927C45.4657 7.1426 45.0945 7.58508 44.6239 7.88669C44.1566 8.18498 43.6329 8.33413 43.0529 8.33413C42.6419 8.33413 42.2922 8.26618 42.0039 8.13029C41.7188 7.9944 41.4852 7.82371 41.3029 7.61822C41.1206 7.40941 40.9814 7.19895 40.8852 6.98683H40.8206V11.0735H38.7027ZM40.7759 4.39166C40.7759 4.84573 40.8388 5.2418 40.9648 5.57987C41.0907 5.91794 41.273 6.18143 41.5117 6.37035C41.7503 6.55596 42.0403 6.64876 42.3817 6.64876C42.7264 6.64876 43.0181 6.5543 43.2567 6.36538C43.4953 6.17314 43.676 5.90799 43.7986 5.56992C43.9245 5.22854 43.9875 4.83579 43.9875 4.39166C43.9875 3.95084 43.9262 3.56306 43.8036 3.2283C43.6809 2.89355 43.5003 2.63171 43.2617 2.44279C43.023 2.25387 42.7297 2.15941 42.3817 2.15941C42.037 2.15941 41.7453 2.25056 41.5067 2.43285C41.2714 2.61514 41.0907 2.87366 40.9648 3.20842C40.8388 3.54317 40.7759 3.93759 40.7759 4.39166ZM51.3222 8.35899C50.5367 8.35899 49.8606 8.1999 49.2938 7.88171C48.7304 7.56022 48.2962 7.10615 47.9912 6.5195C47.6863 5.92954 47.5339 5.23186 47.5339 4.42646C47.5339 3.64095 47.6863 2.95155 47.9912 2.35828C48.2962 1.765 48.7254 1.30264 49.2789 0.971202C49.8357 0.639763 50.4886 0.474043 51.2377 0.474043C51.7415 0.474043 52.2105 0.555246 52.6447 0.717651C53.0822 0.876742 53.4633 1.11704 53.7881 1.43853C54.1162 1.76003 54.3715 2.16438 54.5537 2.6516C54.736 3.1355 54.8272 3.70226 54.8272 4.35188V4.93356H48.379V3.62106H52.8336C52.8336 3.31614 52.7673 3.04601 52.6347 2.81069C52.5021 2.57537 52.3182 2.39142 52.0829 2.25884C51.8509 2.12295 51.5807 2.05501 51.2725 2.05501C50.951 2.05501 50.666 2.12958 50.4174 2.27873C50.1721 2.42456 49.9799 2.62177 49.8407 2.87035C49.7015 3.11562 49.6302 3.38905 49.6269 3.69066V4.93853C49.6269 5.31637 49.6965 5.64284 49.8357 5.91794C49.9782 6.19303 50.1787 6.40515 50.4373 6.5543C50.6958 6.70345 51.0024 6.77802 51.357 6.77802C51.5923 6.77802 51.8078 6.74488 52.0033 6.67859C52.1989 6.6123 52.3662 6.51287 52.5054 6.38029C52.6447 6.24772 52.7507 6.08531 52.8236 5.89308L54.7824 6.02234C54.683 6.49298 54.4792 6.90397 54.1709 7.25529C53.866 7.6033 53.4716 7.87509 52.9877 8.07063C52.5071 8.26287 51.9519 8.35899 51.3222 8.35899Z" fill="url(#paint0_linear_113_1267)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_113_1267" x1="24.4961" y1="-4.29016" x2="68.8788" y2="7.77914" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#9EA8FE"/>
+                    <stop offset="0.331373" stop-color="#6979F8"/>
+                    <stop offset="1" stop-color="#6979F8" stop-opacity="0"/>
+                    </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div>
+                <a id="nav-pl" href="https://protocol.ai" target="_blank" class="link link-sm">Protocol Labs</a>
+                <a id="nav-contribute" href="https://github.com/mscape/mscape/pulls" target="_blank" class="button button-sm">Contribute on GitHub</a>
+            </div>
+        </nav>
+        <div class="row row-1">
+            <div class="column center">
+                <h1>Metaverse landscape</h1>
+            </div>
+        </div>
+        <div class="filter-container">
+            <div id="toggle-extended-container">
+                <label>Show extended landscape</label><input id="toggle-extended" type="checkbox" />
+            </div>
+        </div>
+        <div class="row row-1" style="margin-top: 0px;">
+            <div class="column">
+                <div id="projects" class="layer-wrapper">
+                    <div class="layer-text">
+                        Projects
+                    </div>
+                    <div class="layer">
+                        #foreach( $layer in $projectsView.keySet() )
+                        <div class="capability-layer">
+                            <div class="capability">$layer</div>
+                            <div class="capability-items">
+                                #foreach ($project in $projectsView.get($layer))
+                                <div
+                                    class="item"
+                                    data-name="$project.name"
+                                    data-twitter-handle="$project.twitterHandle"
+                                    data-category="$project.category"
+                                    data-status="$project.status"
+                                    data-website="$project.website"
+                                    data-metaverse-native="$project.metaverseNative"
+                                    data-three-d="$project.threeD"
+                                    data-open-world="$project.openWorld"
+                                    data-user-content="$project.userContent"
+                                    data-access="$project.access"
+                                    data-token="$project.token"
+                                    data-tech-stack="$project.techStack"
+                                    data-description="$project.description"
+                                >
+                                    #if( $project.logoData )
+                                    <img src="$project.logoData"/>
+                                    #end
+                                </div>
+                                #end
+                            </div>
+                        </div>
+                        #end
+                    </div>
+                </div>
+                <hr id="framework-divider"/>
+                #foreach($layer in $technologiesView.keySet())
+                <div id="$layer.toLowerCase()" class="layer-wrapper">
+                    <div class="layer-text">
+                        $layer
+                    </div>
+                    <div class="layer">
+                        #foreach ($capability in $technologiesView.get($layer).keySet())
+                        <div class="capability-layer">
+                            <div class="capability">$capability</div>
+                            <div class="capability-items">
+                                #foreach ($technology in $technologiesView.get($layer).get($capability))
+                                <div
+                                    class="item"
+                                    data-name="$technology.name"
+                                    data-description="$technology.description"
+                                    data-website="$technology.website"
+                                    data-categories="$technology.categories"
+                                    data-company="$technology.company"
+                                    data-metaverse-native="$technology.metaverseNative"
+                                    data-twitter-handle="$technology.twitterHandle"
+                                    data-github="$technology.github"
+                                >
+                                    #if( $technology.logoData )
+                                    <img src="$technology.logoData" />
+                                    #end
+
+                                </div>
+                                #end
+                            </div>
+                        </div>
+                        #end
+                    </div>
+                </div>
+                #end
+            </div>
+            <div id="modal-wrapper">
+                <div id="modal">
+                    <a id="modal-close">╳</a>
+                    <div id="modal-content">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            <div id="footer-logo">
+                <svg width="55" height="12" viewBox="0 0 55 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.613969 8.20984V0.573475H2.63244V1.92078H2.72192C2.88101 1.47333 3.14617 1.12035 3.51738 0.861827C3.88859 0.603305 4.33272 0.474043 4.84977 0.474043C5.37344 0.474043 5.81923 0.604962 6.18712 0.866799C6.55502 1.12532 6.80029 1.47665 6.92292 1.92078H7.00246C7.15824 1.48328 7.43996 1.13361 7.84763 0.87177C8.25862 0.606619 8.74418 0.474043 9.30431 0.474043C10.0169 0.474043 10.5953 0.701079 11.0394 1.15515C11.4868 1.60591 11.7106 2.24559 11.7106 3.07419V8.20984H9.59763V3.4918C9.59763 3.06756 9.48494 2.74937 9.25957 2.53725C9.03419 2.32513 8.75246 2.21907 8.4144 2.21907C8.02993 2.21907 7.72997 2.3417 7.51454 2.58697C7.2991 2.82892 7.19138 3.14876 7.19138 3.54649V8.20984H5.13812V3.44705C5.13812 3.07253 5.0304 2.77423 4.81496 2.55217C4.60284 2.3301 4.32278 2.21907 3.97477 2.21907C3.73944 2.21907 3.52732 2.27873 3.3384 2.39805C3.1528 2.51405 3.0053 2.67812 2.89593 2.89024C2.78655 3.09904 2.73187 3.34431 2.73187 3.62603V8.20984H0.613969ZM20.0172 2.75103L18.0783 2.87035C18.0451 2.70463 17.9739 2.55548 17.8645 2.42291C17.7551 2.28702 17.6109 2.1793 17.432 2.09975C17.2563 2.01689 17.0458 1.97546 16.8006 1.97546C16.4724 1.97546 16.1957 2.04507 15.9703 2.18427C15.7449 2.32016 15.6323 2.50245 15.6323 2.73115C15.6323 2.91344 15.7052 3.06756 15.851 3.1935C15.9968 3.31945 16.2471 3.42054 16.6017 3.49677L17.9838 3.77518C18.7262 3.92764 19.2797 4.17291 19.6443 4.51098C20.0089 4.84904 20.1912 5.29317 20.1912 5.84336C20.1912 6.34384 20.0437 6.78299 19.7487 7.16083C19.4571 7.53867 19.056 7.83366 18.5456 8.04578C18.0385 8.25458 17.4535 8.35899 16.7906 8.35899C15.7797 8.35899 14.9743 8.14852 14.3744 7.72759C13.7778 7.30335 13.4282 6.72665 13.3254 5.99748L15.4085 5.88811C15.4715 6.19634 15.624 6.43167 15.8659 6.59407C16.1079 6.75316 16.4178 6.83271 16.7956 6.83271C17.1668 6.83271 17.4651 6.76145 17.6905 6.61893C17.9192 6.4731 18.0352 6.28583 18.0385 6.05714C18.0352 5.86491 17.954 5.70747 17.7949 5.58484C17.6358 5.45889 17.3905 5.36277 17.0591 5.29649L15.7367 5.03299C14.9909 4.88384 14.4358 4.62532 14.0712 4.25742C13.7099 3.88953 13.5293 3.42054 13.5293 2.85046C13.5293 2.35993 13.6618 1.93735 13.927 1.58271C14.1955 1.22807 14.5716 0.954631 15.0555 0.762395C15.5428 0.570161 16.1128 0.474043 16.7658 0.474043C17.7303 0.474043 18.4893 0.677879 19.0428 1.08555C19.5996 1.49322 19.9244 2.04838 20.0172 2.75103ZM25.2551 8.35899C24.4729 8.35899 23.8001 8.19327 23.2366 7.86183C22.6765 7.52707 22.2456 7.06306 21.944 6.46978C21.6457 5.87651 21.4966 5.19374 21.4966 4.42149C21.4966 3.63929 21.6474 2.95321 21.949 2.36325C22.2539 1.76997 22.6865 1.30761 23.2466 0.976174C23.8067 0.64142 24.4729 0.474043 25.2452 0.474043C25.9114 0.474043 26.4947 0.595019 26.9952 0.836969C27.4956 1.07892 27.8917 1.41865 28.1834 1.85615C28.475 2.29365 28.6358 2.80738 28.6656 3.39734H26.667C26.6107 3.01618 26.4616 2.7096 26.2196 2.47759C25.981 2.24227 25.6678 2.12461 25.28 2.12461C24.9518 2.12461 24.6652 2.2141 24.4199 2.39308C24.1779 2.56874 23.989 2.82561 23.8531 3.16367C23.7172 3.50174 23.6493 3.91107 23.6493 4.39166C23.6493 4.87887 23.7156 5.29317 23.8482 5.63455C23.984 5.97594 24.1746 6.23612 24.4199 6.41509C24.6652 6.59407 24.9518 6.68356 25.28 6.68356C25.5219 6.68356 25.739 6.63384 25.9312 6.53441C26.1268 6.43498 26.2875 6.2908 26.4135 6.10188C26.5428 5.90965 26.6273 5.6793 26.667 5.41083H28.6656C28.6325 5.99417 28.4734 6.5079 28.1884 6.95203C27.9066 7.39284 27.5172 7.73754 27.02 7.98612C26.5229 8.2347 25.9346 8.35899 25.2551 8.35899ZM32.4792 8.35402C31.992 8.35402 31.5578 8.2695 31.1766 8.10046C30.7955 7.92812 30.4939 7.67456 30.2718 7.33981C30.053 7.00174 29.9437 6.58081 29.9437 6.07703C29.9437 5.65278 30.0216 5.29649 30.1773 5.00813C30.3331 4.71978 30.5452 4.48777 30.8137 4.31211C31.0822 4.13645 31.3871 4.00387 31.7285 3.91438C32.0732 3.8249 32.4344 3.76192 32.8123 3.72546C33.2564 3.67906 33.6144 3.63598 33.8861 3.5962C34.1579 3.55312 34.3551 3.49014 34.4778 3.40728C34.6004 3.32442 34.6617 3.20179 34.6617 3.03938V3.00955C34.6617 2.69469 34.5623 2.45108 34.3634 2.27873C34.1679 2.10638 33.8895 2.02021 33.5282 2.02021C33.147 2.02021 32.8438 2.10473 32.6184 2.27376C32.393 2.43948 32.2439 2.64829 32.1709 2.90018L30.2121 2.74109C30.3116 2.27707 30.5071 1.87603 30.7988 1.53796C31.0905 1.19658 31.4666 0.934744 31.9273 0.752452C32.3914 0.566846 32.9283 0.474043 33.5381 0.474043C33.9624 0.474043 34.3684 0.523759 34.7562 0.623191C35.1473 0.722623 35.4936 0.876742 35.7952 1.08555C36.1002 1.29436 36.3405 1.56282 36.5161 1.89095C36.6918 2.21576 36.7796 2.6052 36.7796 3.05927V8.20984H34.7711V7.15089H34.7114C34.5888 7.38953 34.4247 7.59999 34.2192 7.78228C34.0137 7.96126 33.7668 8.10212 33.4785 8.20487C33.1901 8.3043 32.857 8.35402 32.4792 8.35402ZM33.0857 6.89237C33.3973 6.89237 33.6724 6.83105 33.911 6.70842C34.1496 6.58247 34.3369 6.41344 34.4728 6.20132C34.6087 5.98919 34.6766 5.7489 34.6766 5.48044V4.67007C34.6103 4.71315 34.5192 4.75293 34.4032 4.78938C34.2905 4.82253 34.1629 4.85401 34.0204 4.88384C33.8779 4.91036 33.7353 4.93522 33.5928 4.95842C33.4503 4.9783 33.321 4.99653 33.205 5.01311C32.9565 5.04956 32.7394 5.10757 32.5538 5.18711C32.3682 5.26666 32.224 5.37437 32.1212 5.51027C32.0185 5.64284 31.9671 5.80856 31.9671 6.00742C31.9671 6.29578 32.0715 6.51618 32.2803 6.66865C32.4924 6.81779 32.7609 6.89237 33.0857 6.89237ZM38.7027 11.0735V0.573475H40.7908V1.85615H40.8852C40.978 1.65065 41.1123 1.44185 41.2879 1.22973C41.4669 1.01429 41.6989 0.835312 41.984 0.692793C42.2723 0.54696 42.6303 0.474043 43.0578 0.474043C43.6147 0.474043 44.1284 0.619877 44.599 0.911543C45.0697 1.1999 45.4459 1.63574 45.7276 2.21907C46.0093 2.79909 46.1502 3.5266 46.1502 4.4016C46.1502 5.2534 46.0126 5.97262 45.7375 6.55927C45.4657 7.1426 45.0945 7.58508 44.6239 7.88669C44.1566 8.18498 43.6329 8.33413 43.0529 8.33413C42.6419 8.33413 42.2922 8.26618 42.0039 8.13029C41.7188 7.9944 41.4852 7.82371 41.3029 7.61822C41.1206 7.40941 40.9814 7.19895 40.8852 6.98683H40.8206V11.0735H38.7027ZM40.7759 4.39166C40.7759 4.84573 40.8388 5.2418 40.9648 5.57987C41.0907 5.91794 41.273 6.18143 41.5117 6.37035C41.7503 6.55596 42.0403 6.64876 42.3817 6.64876C42.7264 6.64876 43.0181 6.5543 43.2567 6.36538C43.4953 6.17314 43.676 5.90799 43.7986 5.56992C43.9245 5.22854 43.9875 4.83579 43.9875 4.39166C43.9875 3.95084 43.9262 3.56306 43.8036 3.2283C43.6809 2.89355 43.5003 2.63171 43.2617 2.44279C43.023 2.25387 42.7297 2.15941 42.3817 2.15941C42.037 2.15941 41.7453 2.25056 41.5067 2.43285C41.2714 2.61514 41.0907 2.87366 40.9648 3.20842C40.8388 3.54317 40.7759 3.93759 40.7759 4.39166ZM51.3222 8.35899C50.5367 8.35899 49.8606 8.1999 49.2938 7.88171C48.7304 7.56022 48.2962 7.10615 47.9912 6.5195C47.6863 5.92954 47.5339 5.23186 47.5339 4.42646C47.5339 3.64095 47.6863 2.95155 47.9912 2.35828C48.2962 1.765 48.7254 1.30264 49.2789 0.971202C49.8357 0.639763 50.4886 0.474043 51.2377 0.474043C51.7415 0.474043 52.2105 0.555246 52.6447 0.717651C53.0822 0.876742 53.4633 1.11704 53.7881 1.43853C54.1162 1.76003 54.3715 2.16438 54.5537 2.6516C54.736 3.1355 54.8272 3.70226 54.8272 4.35188V4.93356H48.379V3.62106H52.8336C52.8336 3.31614 52.7673 3.04601 52.6347 2.81069C52.5021 2.57537 52.3182 2.39142 52.0829 2.25884C51.8509 2.12295 51.5807 2.05501 51.2725 2.05501C50.951 2.05501 50.666 2.12958 50.4174 2.27873C50.1721 2.42456 49.9799 2.62177 49.8407 2.87035C49.7015 3.11562 49.6302 3.38905 49.6269 3.69066V4.93853C49.6269 5.31637 49.6965 5.64284 49.8357 5.91794C49.9782 6.19303 50.1787 6.40515 50.4373 6.5543C50.6958 6.70345 51.0024 6.77802 51.357 6.77802C51.5923 6.77802 51.8078 6.74488 52.0033 6.67859C52.1989 6.6123 52.3662 6.51287 52.5054 6.38029C52.6447 6.24772 52.7507 6.08531 52.8236 5.89308L54.7824 6.02234C54.683 6.49298 54.4792 6.90397 54.1709 7.25529C53.866 7.6033 53.4716 7.87509 52.9877 8.07063C52.5071 8.26287 51.9519 8.35899 51.3222 8.35899Z" fill="url(#paint0_linear_113_1267)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_113_1267" x1="24.4961" y1="-4.29016" x2="68.8788" y2="7.77914" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#9EA8FE"/>
+                    <stop offset="0.331373" stop-color="#6979F8"/>
+                    <stop offset="1" stop-color="#6979F8" stop-opacity="0"/>
+                    </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div id="footer-button-pills">
+                <a href="https://github.com/mscape/mscape" class="button-pill">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12C0 17.31 3.435 21.795 8.205 23.385C8.805 23.49 9.03 23.13 9.03 22.815C9.03 22.53 9.015 21.585 9.015 20.58C6 21.135 5.22 19.845 4.98 19.17C4.845 18.825 4.26 17.76 3.75 17.475C3.33 17.25 2.73 16.695 3.735 16.68C4.68 16.665 5.355 17.55 5.58 17.91C6.66 19.725 8.385 19.215 9.075 18.9C9.18 18.12 9.495 17.595 9.84 17.295C7.17 16.995 4.38 15.96 4.38 11.37C4.38 10.065 4.845 8.985 5.61 8.145C5.49 7.845 5.07 6.615 5.73 4.965C5.73 4.965 6.735 4.65 9.03 6.195C9.99 5.925 11.01 5.79 12.03 5.79C13.05 5.79 14.07 5.925 15.03 6.195C17.325 4.635 18.33 4.965 18.33 4.965C18.99 6.615 18.57 7.845 18.45 8.145C19.215 8.985 19.68 10.05 19.68 11.37C19.68 15.975 16.875 16.995 14.205 17.295C14.64 17.67 15.015 18.39 15.015 19.515C15.015 21.12 15 22.41 15 22.815C15 23.13 15.225 23.505 15.825 23.385C18.2072 22.5807 20.2772 21.0497 21.7437 19.0074C23.2101 16.965 23.9993 14.5143 24 12C24 5.37 18.63 0 12 0Z" fill="url(#paint0_linear_16_969)"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_16_969" x1="27.3733" y1="23.1173" x2="-8.2454" y2="11.1272" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#A4AEFC"/>
+                                <stop offset="0.5625" stop-color="#6979F8"/>
+                                <stop offset="1" stop-color="#6979F8" stop-opacity="0"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+        </footer>
+    </div>
+    <div id="modal-background"></div>
+    <script>
+        var modalBackground = document.querySelector("#modal-background");
+        var modalWrapper = document.querySelector("#modal-wrapper");
+        var modal = document.querySelector("#modal");
+        var modalContent = document.querySelector("#modal-content");
+        var modalClose = document.querySelector("#modal-close");
+        var toggleExtended = document.querySelector("#toggle-extended");
+        var extendedItems = document.querySelectorAll("[data-metaverse-native='0']");
+        var framework = JSON.parse('$framework');
+
+        function lookUpFrameworkLayer(lookUpCapability) {
+            var layers = framework.Technologies;
+            for (layer in layers) {
+                for (capability of layers[layer]) {
+                    if (capability == lookUpCapability) {
+                        return layer;
+                    }
+                }
+            }
+        }
+
+        toggleExtended.addEventListener("change", function(event) {
+            if(toggleExtended.checked) {
+                extendedItems.forEach(element => {
+                    element.style.display = "flex";
+                });
+            } else {
+                extendedItems.forEach(element => {
+                    element.style.display = "none";
+                });
+            }
+        });
+
+        function closeModal () {
+            modal.style.display = "none";
+            modalBackground.style.display = "none";
+            modalWrapper.style.display = "none";
+        }
+
+        modalWrapper.addEventListener('click', function(event) {
+            if(event.target.id == "modal-wrapper") {
+                closeModal();
+            }
+        });
+
+        modalClose.addEventListener('click', function() {
+            closeModal();
+        });
+
+        document.querySelectorAll('.item').forEach(item => {
+            item.addEventListener('click', function(event) {
+                modalBackground.style.display = "block";
+                modalWrapper.style.display = "flex";
+                modal.style.display = "block";
+                var element = event.currentTarget;
+                var logo = element.querySelector('img, svg');
+                var tempHtml = ''
+
+                if (logo) {
+                    tempHtml += '<div id="modal-logo">' + logo.outerHTML + '</div>';
+                }
+
+                tempHtml += '<h3 style="margin-top: 30px;">' + element.dataset.name + '</h3>';
+                tempHtml += '<p>' + element.dataset.description + '</p>'
+
+                tempHtml += '<table>';
+
+                if(element.dataset.company) {
+                    tempHtml += '<tr><th>Company</th><td>' + element.dataset.company + '</td></tr>';
+                }
+
+                if(element.dataset.layer) {
+                    tempHtml += '<tr><th>Layer</th><td>' + element.dataset.layer + '</td></tr>';
+                }
+
+                if(element.dataset.categories) {
+                    var categories = element.dataset.categories.replace("]","").replace("[","").split(",");
+                    categories = categories.map( category => category.trim());
+                    console.log(categories);
+                    tempHtml += '<tr><th>Categories</th><td>';
+                    categories.forEach( category => {
+                        tempHtml += '<div class="modal-pill modal-pill-' + lookUpFrameworkLayer(category).toLowerCase() + '">' + category + '</div>';
+                    })
+                    tempHtml += '</td></tr>';
+                }
+
+                if (element.dataset.category) {
+                    tempHtml += '<tr><th>Category</th><td><div class="modal-pill modal-pill-project">' + element.dataset.category + '</div></td></tr>';
+                }
+
+                if(element.dataset.metaverseNative == "1") {
+                    tempHtml += '<tr><th>Metaverse Native</th><td>Yes</td></tr>';
+                } else if(element.dataset.metaverseNative == "0") {
+                    tempHtml += '<tr><th>Metaverse Native</th><td>No</td></tr>';
+                }
+
+                if(element.dataset.website) {
+                    tempHtml += '<tr><th>Website</th><td><a href="' + element.dataset.website + '" target="_blank">' + element.dataset.website + '</a></td></tr>';
+                }
+
+                if(element.dataset.status) {
+                    tempHtml += '<tr><th>Status</th><td>' + element.dataset.status + '</td></tr>';
+                }
+
+                if(element.dataset.access) {
+                    var access = element.dataset.access.replace("]","").replace("[","")
+                    tempHtml += '<tr><th>Access</th><td>' + access + '</td></tr>';
+                }
+
+                if(element.dataset.token) {
+                    tempHtml += '<tr><th>Token</th><td>' + element.dataset.token + '</td></tr>';
+                }
+
+                if(element.dataset.threeD == "1") {
+                    tempHtml += '<tr><th>3D world</th><td>Yes</td></tr>';
+                } else if(element.dataset.threeD == "0") {
+                    tempHtml += '<tr><th>3D world</th><td>No</td></tr>';
+                }
+
+                if(element.dataset.openWorld == "1") {
+                    tempHtml += '<tr><th>Open world</th><td>Yes</td></tr>';
+                } else if(element.dataset.openWorld == "0") {
+                    tempHtml += '<tr><th>Open world</th><td>No</td></tr>';
+                }
+
+                if(element.dataset.userContent == "1") {
+                    tempHtml += '<tr><th>User generated content</th><td>Yes</td></tr>';
+                } else if(element.dataset.userContent == "0") {
+                    tempHtml += '<tr><th>User generated content</th><td>No</td></tr>';
+                }
+
+                tempHtml += '</table>';
+
+                if(element.dataset.github) {
+                    tempHtml += '<a href="https://github.com/' + element.dataset.github + '" target="_blank" class="github-image"><img src="https://gh-card.dev/repos/' + element.dataset.github + '.svg" /></a>';
+                }
+
+                if(element.dataset.twitterHandle) {
+                    tempHtml += '<a class="twitter-timeline" data-width="100%" data-height="300" data-theme="dark" href="https://twitter.com/' + element.dataset.twitterHandle + '">Tweets by earth2io</a>';
+                    twttr.widgets.load();
+                }
+
+                modalContent.innerHTML = tempHtml;
+            });
+        });
+
+        window.addEventListener("keydown", function(event) {
+            if(event.key == "Escape") {
+                closeModal();
+            }
+        }, true);
+    </script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>

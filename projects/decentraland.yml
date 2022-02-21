@@ -1,0 +1,16 @@
+name: Decentraland
+twitterHandle: decentraland
+status: Live
+website: https://decentraland.org
+category: Virtual worlds
+metaverseNative: 0
+threeD: 1
+openWorld: 1
+userContent: 1
+access:
+  - Web
+token: N/A
+description: Decentraland is a decentralized virtual reality platform powered by
+  the Ethereum blockchain. Within the Decentraland platform, users can create,
+  experience, and monetize their content and applications.
+logo: logos/projects/decentraland.svg

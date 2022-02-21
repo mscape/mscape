@@ -1,0 +1,13 @@
+name: Filecoin
+company: Protocol Labs
+categories:
+  - Persistent shared storage
+metaverseNative: 0
+description: Filecoin is a decentralized storage network developed by Protocol
+  Labs. Filecoin is an incentiviced storage marketplace enabling permanent
+  storage of data. Filecoin uses IPFS and libp2p.
+website: https://filecoin.io/
+github: ""
+twitterHandle: Filecoin
+group: 0
+logo: logos/technologies/filecoin.svg

@@ -1,0 +1,13 @@
+name: Arweave
+company: Minimum Spanning Technologies
+categories:
+  - Persistent shared storage
+metaverseNative: 0
+description: Arweave is a decentralized storage network developed by Minimum
+  Spanning Technologies. Arweave enables permanent storage of data, e.g., for
+  archiving.
+website: https://www.arweave.org/
+github: ""
+twitterHandle: ArweaveTeam
+group: 0
+logo: logos/technologies/arweave.png

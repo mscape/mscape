@@ -1,0 +1,15 @@
+name: PlayMining
+twitterHandle: PlayMining_SG
+status: Live
+website: https://playmining.com
+category: Games
+metaverseNative: 0
+threeD: 0
+openWorld: 0
+userContent: 0
+access:
+  - Web
+token: DEP
+description: Play Mining is a content platform where users can earn DEAPCoin
+  through playing job tribes and using their NFT marketplace.
+logo: logos/projects/playmining.jpeg

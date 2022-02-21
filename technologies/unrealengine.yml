@@ -1,0 +1,13 @@
+name: Unreal Engine
+company: Epic Games
+categories:
+  - Engine
+metaverseNative: 0
+description: Unreal Engine is a 3D game engine to build 3D experiences for a
+  wide range of platforms including desktop and mobile. Unreal Engine powers
+  some of the most recognized games like Fortnite.
+website: https://www.unrealengine.com/en-US/unreal
+github: ""
+twitterHandle: UnrealEngine
+group: 0
+logo: logos/technologies/unrealengine.png

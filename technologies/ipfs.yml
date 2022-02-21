@@ -1,0 +1,13 @@
+name: IPFS
+company: Protocol Labs
+categories:
+  - Fast geo-replicated caches
+metaverseNative: 0
+description: IPFS is a peer-to-peer hypermedia protocol developed by Protocol
+  Labs. IPFS is decentralized and content-addressable. IPFS powers applications
+  like Filecoin.
+website: https://ipfs.io/
+github: ipfs/go-ipfs
+twitterHandle: IPFS
+group: 0
+logo: logos/technologies/ipfs.png

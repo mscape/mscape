@@ -1,0 +1,16 @@
+name: Neos
+twitterHandle: neos_vr
+status: Live
+website: https://neos.com
+category: Virtual worlds
+metaverseNative: 1
+threeD: 1
+openWorld: "?"
+userContent: "?"
+access:
+  - Propietary client
+token: NCR
+description: Neos is a virtual reality metaverse that reinvents and generalizes
+  the way social experiences and virtual creations are built, to let them all
+  coexist in one shared space.
+logo: logos/projects/neos.png

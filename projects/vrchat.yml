@@ -1,0 +1,15 @@
+name: VRChat
+twitterHandle: VRChat
+status: Live
+website: https://hello.vrchat.com
+category: Virtual worlds
+metaverseNative: 0
+threeD: 1
+openWorld: 1
+userContent: "?"
+access:
+  - "?"
+token: N/A
+description: VRChat is an online virtual world platform that allows users to
+  interact with others with user-created 3D avatars and worlds.
+logo: logos/projects/vrchat.png

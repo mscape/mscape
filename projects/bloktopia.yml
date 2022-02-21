@@ -1,0 +1,17 @@
+name: Bloktopia
+twitterHandle: bloktopia
+status: Announced
+website: https://www.bloktopia.com/
+category: Virtual worlds
+metaverseNative: 1
+threeD: 1
+openWorld: 1
+userContent: 1
+access:
+  - "?"
+token: BLOK
+description: Bloktopia is a decentralized Metaverse built and backed by Polygon.
+  It is a virtual skyscraper made up of 21 levels to pay recognition to 21
+  million Bitcoin. It acts as a central hub and welcomes all levels of the
+  crypto experience.
+logo: logos/projects/bloktopia.png

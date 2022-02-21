@@ -1,0 +1,12 @@
+name: Valve Index
+company: Valve
+categories:
+  - Interfaces
+metaverseNative: 0
+description: Valve Index is a VR headset designed by Valve. Valve Index requires
+  a Valve base station and PC.
+website: https://store.steampowered.com/valveindex
+github: ""
+twitterHandle: valvesoftware
+group: 0
+logo: logos/technologies/valveindex.jpeg

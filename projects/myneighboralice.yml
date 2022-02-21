@@ -1,0 +1,16 @@
+name: My Neighbor Alice
+twitterHandle: MyNeighborAlice
+status: Live
+website: https://www.myneighboralice.com/
+category: Games
+metaverseNative: 0
+threeD: 1
+openWorld: 1
+userContent: 1
+access:
+  - "?"
+token: ALICe
+description: My Neighbor Alice is a blockchain-based multiplayer builder game.
+  Users can buy and own virtual islands, collect and build exciting items and
+  meet new friends.
+logo: logos/projects/myneighboralice.png

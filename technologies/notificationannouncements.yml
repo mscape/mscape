@@ -1,0 +1,13 @@
+name: Notification Announcements
+company: Apple
+categories:
+  - Interfaces
+metaverseNative: 0
+description: Notification Announcements is a feature integrated in Apple's
+  operating system iOS to announce incoming notifications. Notification
+  Announcements allows you to reply hands-free with you voice.
+website: https://support.apple.com/en-za/HT210406
+github: ""
+twitterHandle: apple
+group: 0
+logo: logos/technologies/notificationannouncements.png

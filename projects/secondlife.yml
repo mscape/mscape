@@ -1,0 +1,16 @@
+name: Second Life
+twitterHandle: SecondLife
+status: Live
+website: https://secondlife.com
+category: Virtual worlds
+metaverseNative: 0
+threeD: 1
+openWorld: 1
+userContent: 1
+access:
+  - Proprietary client
+token: N/A
+description: Second Life is an online multimedia platform that allows people to
+  create an avatar for themselves and have a second life in an online virtual
+  world.
+logo: logos/projects/secondlife.png

@@ -1,0 +1,11 @@
+name: Spoke
+company: Mozilla
+categories:
+  - Engine
+metaverseNative: 0
+description: Spoke can be used to discover, create and share 3D spaces for Mozilla Hubs.
+website: https://hubs.mozilla.com/spoke/
+github: mozilla/Spoke
+twitterHandle: MozillaHubs
+group: 0
+logo: logos/technologies/spoke.png

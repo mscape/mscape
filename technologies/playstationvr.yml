@@ -1,0 +1,12 @@
+name: Playstation VR
+company: Sony
+categories:
+  - Interfaces
+metaverseNative: 0
+description: The PlayStation VR is a virtual reality headset developed by Sony
+  for Playstation 4/5.
+website: https://www.playstation.com/en-za/ps-vr/
+github: ""
+twitterHandle: PlayStation
+group: 0
+logo: logos/technologies/playstationvr.jpeg

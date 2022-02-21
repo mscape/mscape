@@ -1,0 +1,15 @@
+{
+  "site": {
+    "id": "a99a8974-3cf3-4b3c-9d8f-ee6864c5a909",
+    "team": "b8d12959-982f-4a77-92c3-23169f201b0f",
+    "platform": "ipfs",
+    "source": "github",
+    "name": "empty-paper-7783"
+  },
+  "build": {
+    "baseDir": "",
+    "publicDir": "landingpage",
+    "command": "",
+    "rootDir": "."
+  }
+}

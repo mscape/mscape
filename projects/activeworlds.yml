@@ -1,0 +1,17 @@
+name: Active Worlds
+twitterHandle: activeworlds3d
+status: Live
+website: http://www.activeworlds.com
+category: Virtual worlds
+metaverseNative: 0
+threeD: 1
+openWorld: 1
+userContent: 1
+access:
+  - Propiertary client
+token: N/A
+description: Active Worlds is an online virtual world where users assign
+  themselves a name, log into the Active Worlds universe, and explore 3D virtual
+  worlds and environments that others have built. ActiveWorlds allows users to
+  own worlds and universes, and develop custom 3D content.
+logo: logos/projects/activeworlds.png

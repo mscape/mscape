@@ -1,0 +1,11 @@
+name: Photon
+company: Exit Games GmbH
+categories:
+  - Engine
+metaverseNative: 0
+description: Photon is building products for developers to build multiplayer games.
+website: https://www.photonengine.com
+github: ""
+twitterHandle: ExitGames
+group: 0
+logo: logos/technologies/photon.png

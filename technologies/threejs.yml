@@ -1,0 +1,12 @@
+name: Three.js
+company: Three.js
+categories:
+  - Engine
+metaverseNative: 0
+description: Three.js aims to create an easy to use, lightweight, cross-browser,
+  general purpose 3D library
+website: https://threejs.org
+github: mrdoob/three.js
+twitterHandle: threejs
+group: 0
+logo: logos/technologies/threejs.svg

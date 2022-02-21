@@ -1,0 +1,12 @@
+name: Pimax 8k plus
+company: Pimax
+categories:
+  - Interfaces
+metaverseNative: 1
+description: Pimax 8k plus is a virtual reality headset developed by Pimax. It
+  supports SteamVR and is compatible with Steam accessories.
+website: https://pimax.com/product/vision-8k-plus/
+github: ""
+twitterHandle: pimaxofficial
+group: 0
+logo: logos/technologies/pimax8kplus.jpeg

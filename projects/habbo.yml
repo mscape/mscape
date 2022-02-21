@@ -1,0 +1,17 @@
+name: Habbo
+twitterHandle: Habbo
+status: Live
+website: https://www.habbo.com/
+category: Games
+metaverseNative: 0
+threeD: 0
+openWorld: 1
+userContent: 0
+access:
+  - Web
+token: N/A
+description: Habbo is an online vintage pixel-art style virtual community where
+  you can create your own avatar, make friends, chat, build rooms, design + play
+  games and so much more! Almost anything is possible in this strange place full
+  of awesome people…
+logo: logos/projects/habbo.png

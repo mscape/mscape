@@ -1,0 +1,16 @@
+name: Horizon Workrooms
+twitterHandle: Meta
+status: Beta
+website: https://www.oculus.com/workrooms/
+category: Virtual worlds
+metaverseNative: 0
+threeD: 1
+openWorld: 1
+userContent: 0
+access:
+  - VR
+token: N/A
+description: Horizon Workrooms is a VR space for teams to connect, collaborate
+  and develop ideas, together. It allows users to meet teammates across the
+  table, even if you're across the world.
+logo: logos/projects/horizonworkrooms.png

@@ -1,0 +1,12 @@
+name: HP Reverb G2 v2
+company: HP
+categories:
+  - Interfaces
+metaverseNative: 0
+description: VR headset with two motion controllers. Supports SteamVR and
+  Windows Mixed Reality
+website: https://www.hp.com/us-en/vr/reverb-g2-vr-headset.html
+github: ""
+twitterHandle: hp
+group: 0
+logo: logos/technologies/hpreverbg2v2.png
