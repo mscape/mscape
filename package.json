@@ -9,7 +9,7 @@
   "scripts": {
     "all": "npm run build && npm run deploy",
     "build": "npm run cleanup:build && mkdir -p build && node build.js",
-    "start": "nodemon build.js --ext 'vm, yml'",
+    "start": "npm run build && nodemon build.js --ext 'vm, yml'",
     "deploy": "npm run deploy:landscape && npm run deploy:landingpage",
     "deploy:landscape": "DEPLOYMENT_MODE=landscape node -r dotenv/config deploy.js",
     "deploy:landingpage": "DEPLOYMENT_MODE=landingpage node -r dotenv/config deploy.js",
