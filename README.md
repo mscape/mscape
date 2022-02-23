@@ -53,6 +53,7 @@ The metaverse landscape repository consists of the following directories:
 The metaverse landscape provides a set of commands:
 
 - `npm run all`: Runs build and deployment
+- `npm run start`: Runs watch server and rebuilds template on file changes
 - `npm run build`: Runs build of lanscape
 - `npm run cleanup:build`: Runs cleanup of build directory
 - `npm run deploy`: Runs deployment of landscape and landingpage
