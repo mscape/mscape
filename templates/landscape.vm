@@ -47,7 +47,6 @@
         }
 
         .filter-container {
-            align-items:center;
             display:flex;
             height:70px;
             justify-content:space-between;
@@ -94,6 +93,11 @@
 
         .row-1 {
             grid-template-columns:1fr;
+        }
+
+        #more-information {
+            display:flex;
+            flex-direction:column;
         }
 
         @media (max-width: 576px) {
@@ -423,11 +427,9 @@
         }
 
         #toggle-extended-container {
-            align-items:center;
             display:flex;
             flex-direction:row;
             gap:1rem;
-            justify-content:center;
         }
 
         [data-metaverse-native="0"] {
@@ -592,6 +594,19 @@
             border-style:solid;
             border-color:#6979F8 transparent transparent transparent;
         }
+
+        #search {
+            background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGOSURBVHgBpZNfUsIwEMZ3g+m0b72B3MAeoZ5AuIGcAB478EAZBuTN8QZ4Ar2BeoN6gx6BB0cgMVmTMi0Ryz/9HtokTX/Z3XyLsEdpSqHgsqm1Cn3lZ2mKCzgg3F1IxjIGRkNCioAgR8DFZoxmDA+zgTc/Ckqmcgigb81PI1/yZzeKZLw0BzSGBBCiVO1ZGuS1IAsh0O1AePGhNJLJMiVo3ASSX7v7mH30JyKykaDQrWO1mA2CFJDyFRc9d70AaYB7m85uuPtkou4gQtdeSAUqJkjxviLWyUZNhNmnJ+IKZK/YFDCDM2Xq+c4IogoEf5S1hTtnnuS5oTXhTJksIo3bTFiZb+GTcyJCuGJCb0Gbl3q0ZjsVUhgX8dW95QJkvDGvNhxRf/JReA7WauSuX1QjpjpA7CW5E027addT1iYr76urQPdMOywYb4Tu999Na1sAWRdN3UxJ3zaH4CURtYo1qTqMq1Ajf2KE7enAy2pB5enrhoiJlT7RuS/9H01sU3RhtaBTVcJA6Gv4r8p++wbQNcZs3mB3nAAAAABJRU5ErkJggg==') #242938 no-repeat right 6px center;
+            border:#575D7E 1px solid;
+            border-radius:2px;
+            color:#E4F3FF;
+            padding:6px 12px;
+            font-size:14px;
+        }
+
+        #search:focus {
+            border:#6979F8 1px solid;
+        }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -632,6 +647,7 @@
                 <input id="toggle-extended" type="checkbox" />
             </div>
             <div id="more-information">
+                <input type="text" id="search" placeholder="Search for name or company" />
                 <span>Click on a logo to see more information!</span>
             </div>
         </div>
@@ -756,6 +772,7 @@
         var toggleExtended = document.querySelector("#toggle-extended");
         var extendedItems = document.querySelectorAll("[data-metaverse-native='0']");
         var framework = JSON.parse('$framework');
+        var items = document.querySelectorAll('.item');
 
         function lookUpFrameworkLayer(lookUpCapability) {
             var layers = framework.Technologies;
@@ -796,7 +813,7 @@
             closeModal();
         });
 
-        document.querySelectorAll('.item').forEach(item => {
+        items.forEach(item => {
             item.addEventListener('click', function(event) {
                 modalBackground.style.display = "block";
                 modalWrapper.style.display = "flex";
@@ -898,6 +915,34 @@
                 closeModal();
             }
         }, true);
+
+        var typingTimer;
+        var TYPING_DONE_INTERVAL = 600;
+        var inputSearch = document.querySelector("#search");
+
+        inputSearch.addEventListener("keyup", function(event) {
+            clearTimeout(typingTimer);
+            typingTimer = setTimeout(search, TYPING_DONE_INTERVAL, inputSearch.value);
+        });
+
+        function search(value) {
+            value = value.toLowerCase();
+            
+            items.forEach(item => {
+                var name = item.dataset.name.toLowerCase();
+                var company = item.dataset.company ? item.dataset.company.toLowerCase() : "";
+                
+                if(value == "") {
+                    if(toggleExtended.checked == 1 || (toggleExtended.checked == 0 && item.dataset.metaverseNative == 1)) {
+                        item.style.display = 'flex';
+                    }
+                } else if(name.indexOf(value) !== -1 || company.indexOf(value) !== -1) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
     </script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
