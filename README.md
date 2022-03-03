@@ -150,3 +150,9 @@ Please follow the following conventions:
 - Logos should always be SVG images if available, otherwise use PNG with transparent background
 - Twitter handles must not contain a #
 - GitHub links must follow the structure `{ORGANIZATION}/{REPOSITORY}`
+
+## License
+
+All logos and trademarks are copyrighted by their respective owners, and are cached here for reliability.
+
+Everything else is under the MIT License.
