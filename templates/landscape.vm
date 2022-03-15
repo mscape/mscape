@@ -770,6 +770,7 @@
         var modalContent = document.querySelector("#modal-content");
         var modalClose = document.querySelector("#modal-close");
         var toggleExtended = document.querySelector("#toggle-extended");
+        var toggleExtendedContainer = document.querySelector("#toggle-extended-container");
         var extendedItems = document.querySelectorAll("[data-metaverse-native='0']");
         var framework = JSON.parse('$framework');
         var items = document.querySelectorAll('.item');
@@ -922,7 +923,26 @@
 
         inputSearch.addEventListener("keyup", function(event) {
             clearTimeout(typingTimer);
-            typingTimer = setTimeout(search, TYPING_DONE_INTERVAL, inputSearch.value);
+
+            // handle empty search value and restore landscape
+            if(inputSearch.value == "") {
+                // restore correctly filtered landscape (non-extended vs extended)
+                items.forEach(item => {
+                    if(toggleExtended.checked == 1 || (toggleExtended.checked == 0 && item.dataset.metaverseNative == 1)) {
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                // enable possbility to toggle extended landscape when search becomes inactive
+                toggleExtendedContainer.style.opacity = 1;
+            // perform search with value in search box
+            } else {
+                // disable possbility to toggle extended landscape while search is active
+                toggleExtendedContainer.style.opacity = 0;
+                // perform search
+                typingTimer = setTimeout(search, TYPING_DONE_INTERVAL, inputSearch.value);
+            }
         });
 
         function search(value) {
@@ -931,12 +951,9 @@
             items.forEach(item => {
                 var name = item.dataset.name.toLowerCase();
                 var company = item.dataset.company ? item.dataset.company.toLowerCase() : "";
-                
-                if(value == "") {
-                    if(toggleExtended.checked == 1 || (toggleExtended.checked == 0 && item.dataset.metaverseNative == 1)) {
-                        item.style.display = 'flex';
-                    }
-                } else if(name.indexOf(value) !== -1 || company.indexOf(value) !== -1) {
+
+                // show item if search value is contained in project name or company name
+                if(name.indexOf(value) !== -1 || company.indexOf(value) !== -1) {
                     item.style.display = 'flex';
                 } else {
                     item.style.display = 'none';
