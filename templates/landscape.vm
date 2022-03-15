@@ -37,7 +37,7 @@
 
         span {
             color:#E4F3FF;
-            font-size:14px;
+            font-size:16px;
             line-height:32px;
             text-align: center;
         }
@@ -64,7 +64,7 @@
 
         label {
             color:#E4F3FF;
-            font-size:14px;
+            font-size:16px;
             font-weight: 400;
             line-height:32px;
         }
@@ -571,9 +571,8 @@
 
         .tooltip {
             display:none;
-            background:#242938;
+            background:#6c79f3;
             font-size:12px;
-            border:1px solid #6979F8;
             border-radius:2px;
             border-width:1px;
             margin-top:-150px;
@@ -592,7 +591,7 @@
             margin-left:-5px;
             border-width:5px;
             border-style:solid;
-            border-color:#6979F8 transparent transparent transparent;
+            border-color:#6c79f3 transparent transparent transparent;
         }
 
         #search {
@@ -601,11 +600,15 @@
             border-radius:2px;
             color:#E4F3FF;
             padding:6px 12px;
-            font-size:14px;
+            font-size:16px;
         }
 
         #search:focus {
             border:#6979F8 1px solid;
+        }
+
+        :focus{
+            outline:0;
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
