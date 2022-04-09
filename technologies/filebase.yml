@@ -2,15 +2,11 @@ name: Filebase
 twitterHandle: filebase
 status: Live
 website: https://filebase.com
-category: Decentralized Object Storage
+category: Fast geo-replicated caches
 metaverseNative: 0
-threeD: 0
-openWorld: 0
-userContent: 
 access:
   - Web
   - S3-compatible API
 token: N/A
 description: Filebase is the first S3-compatible object storage platform that allows you to store data in a secure, redundant, and performant manner across multiple decentralized storage networks.
-publish: 1
 logo: logos/technologies/filebase.png
